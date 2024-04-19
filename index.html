@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dummy API</title>
+</head>
+
+<body onload="getData()">
+    <div class="container">
+        <div class="form-container">
+            <form class="create-form" style="display: none;">
+                <input type="text" class="firstName" placeholder="Enter FName">
+                <input type="text" class="lastName" placeholder="Enter LName">
+                <input type="number" class="age" placeholder="Enter Age">
+                <input type="email" class="email" placeholder="Enter Email">
+                <label>
+                    <input type="radio" class="gender" name="gender" value="Male"> Male
+                </label>
+                <label>
+                    <input type="radio" class="gender" name="gender" value="Female"> Female
+                </label>
+                <button type="button" onclick="addRecord()">Create</button>
+            </form>
+
+            <form class="update-form" style="display: none;">
+                <input type="text" class="ufirstName" placeholder="Enter FName">
+                <input type="text" class="ulastName" placeholder="Enter LName">
+                <input type="number" class="uage" placeholder="Enter Age">
+                <input type="email" class="uemail" placeholder="Enter Email">
+                <label>
+                    <input type="radio" class="ugenderr" name="ugender" value="Male"> Male
+                </label>
+                <label>
+                    <input type="radio" class="ugenderr" name="ugender" value="Female"> Female
+                </label>
+                <button type="button" onclick="updateRecord()">Update</button>
+            </form>
+
+            <div class="add-div">
+                <button type="button" onclick="showCreateForm()">Add</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="data-output">
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
